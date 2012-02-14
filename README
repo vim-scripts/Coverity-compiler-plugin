@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3936
+
+Simple compiler plugin to set up an errorformat and makeprg for the cov-format-errors command which ships with Coverity Static Analysis ( http://coverity.com/products/static-analysis.html ). Mostly useful for quick tests since it does not communicate with the Integrity Manager at all. If you want that, Coverity (the company) has a solution which does in their knowledge center ( http://coverity5.coverity.com/node/520 ), but I've not tried it.
+
+Currently without documentation, this script pretty self explanatory. Use :compiler coverity to set the compiler, as normal.
+
+When setting the compiler, the script will prompt you for a path to the Coverity emit/intermediate directory you are interested in parsing. You can optionally set the variable b:coverity_emit_dir to this path and it will just use the path instead of prompting you.
