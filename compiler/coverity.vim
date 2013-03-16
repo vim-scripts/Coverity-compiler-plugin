@@ -1,8 +1,8 @@
 " Vim Compiler File
 " Compiler:     cov-format-errors for Coverity Static Analysis
 " Maintainer:   Ben Fritz
-" Last Change:  14 Feb 2012
-" Version:      1
+" Last Change:  15 Mar 2013
+" Version:      2
 
 if exists("current_compiler")
   finish
@@ -27,5 +27,5 @@ else
 endif
 " TODO: use shellescape on the emit directory name?
 
-CompilerSet errorformat=%Zcaretline:\ %p^,%EError:\ %m,%C%f:%l:,%I%f:%l:,%Z%m
+CompilerSet errorformat=%Zcaretline:\ %p^,%EError:\ %m,%Cpath:%f:%l:%c:,%Cpath:%f:%l:,%C%f:%l:%c:,%C%f:%l:,%Ipath:%f:%l:%c:,%Ipath:%f:%l:,%I%f:%l:%c:,%I%f:%l:,%Z%m
 exe 'CompilerSet makeprg=cov-format-errors\ --emacs-style\ --dir\ '.s:coverity_emit_dir
